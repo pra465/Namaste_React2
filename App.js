@@ -1,12 +1,16 @@
-const heading = React.createElement(
-  'div',
-  { id: 'parent' },
-  React.createElement('div', { id: 'child' }, [
-    React.createElement('h1', { key: 1 }, 'Hello'),
-    React.createElement('h1', { key: 2 }, 'Hello 2'),
-  ])
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+//react element
+const Ele = <h1 id="heading">Hello from jsx9</h1>;
+
+// react functional component
+
+const Heading = () => (
+  <div>
+    {Ele} <h2> hello functional component</h2>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.querySelector('.root'));
-
-root.render(heading);
+root.render(<Heading />);
